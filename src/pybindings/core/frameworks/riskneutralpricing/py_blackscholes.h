@@ -64,7 +64,7 @@ void PyBlackScholes(py::module &m) {
         .def("get_mu", &BlackScholesSimulation::get_mu)
         .def("get_sigma", &BlackScholesSimulation::get_sigma)
         .def("get_T", &BlackScholesSimulation::get_T)
-        .def("get_simulated_prices", &BlackScholesSimulation::get_simulated_prices)
+        .def("get_simulated_prices", &BlackScholesSimulation::get_simulated_prices_vector)
         .def("get_time_taken_for_simulation", &BlackScholesSimulation::get_time_taken_for_simulation)
         .def("set_S", &BlackScholesSimulation::set_S, py::arg("S"))
         .def("set_mu", &BlackScholesSimulation::set_mu, py::arg("mu"))

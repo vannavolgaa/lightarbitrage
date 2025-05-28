@@ -52,7 +52,7 @@ void PyHeston(py::module &m) {
         .def("get_v0", &HestonSimulation::get_v0)
         .def("is_updated", &HestonSimulation::is_updated)
         .def("get_discretization_method", &HestonSimulation::get_discretization_method)
-        .def("get_simulated_prices", &HestonSimulation::get_simulated_prices)
+        .def("get_simulated_prices", &HestonSimulation::get_simulated_prices_vector)
         .def("get_simulation_engine", &HestonSimulation::get_simulation_engine)
         .def("get_payoff_engine", &HestonSimulation::get_payoff_engine)
         .def("get_time_taken_for_simulation", &HestonSimulation::get_time_taken_for_simulation)

@@ -2,6 +2,7 @@
 #include <iostream>
 #include "../../../../../src/core/frameworks/riskneutralpricing/normblack/normblack.h"
 #include "../../../../../src/core/math/quadratures.h"
+#include "../../../../../src/core/math/eigen_tools.h"
 #include "../../../../../src/core/frameworks/riskneutralpricing/payoff/montecarlo.h"
 #include "../../../../../src/core/math/probability/simulation.h"
 #include "../../../../../src/errors/core/frameworks.h"
@@ -89,6 +90,7 @@ class HestonSimulation
         bool is_updated() const { return is_updated_; };
         HestonDiscretizationMethod get_discretization_method() const { return discretization_method_; };
         Eigen::MatrixXd get_simulated_prices() { if (!is_updated_) update(); return simulated_prices; };
+        std::vector<std::vector<double>> get_simulated_prices_vector() {return get_vector_from_eigen_matrix(simulated_prices); };
         MultivariateMonteCarloEngine get_simulation_engine() const { return engine_; };
         MonteCarloPayoffEngine get_payoff_engine() { if (!is_updated_) update(); return MonteCarloPayoffEngine(simulated_prices, T_); };
         double get_time_taken_for_simulation() const { return time_taken_for_simulation_; };
