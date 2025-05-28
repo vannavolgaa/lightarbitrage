@@ -407,3 +407,4 @@ eigen
 build
 lightarbitrage.egg-info
 .DS_Store
+updatelightarb.py

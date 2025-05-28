@@ -8,7 +8,7 @@
 #include "py_erfcody.h"
 #include "py_lossfunction.h"
 #include "py_regression.h"
-#include "../../../../src/pybindings/core/math/probability/py_probabillity.h"
+#include "../../../../src/pybindings/core/math/probability/py_probability.h"
 
 void PyMath(py::module_& m)
 {

@@ -8,7 +8,7 @@ namespace py = pybind11;
 
 void PyNSS(py::module_& m)
 {
-    py::class_<NelsonSiegel, std::shared_ptr<NelsonSiegelSvensson>>(m, "NelsonSiegel")
+    py::class_<NelsonSiegel, std::shared_ptr<NelsonSiegel>>(m, "NelsonSiegel")
         .def(py::init<double, double, double, double>(), 
              py::arg("beta0"), py::arg("beta1"), py::arg("beta2"), py::arg("tau"))
         .def("get_beta0", &NelsonSiegel::get_beta0)
