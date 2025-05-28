@@ -399,3 +399,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+venv 
+external
+eigen 
+build
+lightarbitrage.egg-info

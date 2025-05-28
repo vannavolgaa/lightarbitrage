@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77.0", "wheel", "pybind11>=2.13", "requests"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightarbitrage"
+version = "1.0"
+authors = [
+    {name = "vannavolgaa", email = "joublotferre.marin@outlook.com"}
+]
+description = "This is light Arbitrage, written in a C++ and wrapped for python"
+readme = "README.md"  
+requires-python = ">=3.10"  
+dependencies = [
+    "pybind11>=2.13",
+    "setuptools>=77.0",
+    "requests"
+]
+
+[tool.setuptools]
+zip-safe = false
+
