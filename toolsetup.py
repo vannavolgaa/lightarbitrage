@@ -58,7 +58,7 @@ class ArbitrageBuild(ABC):
     def get_setup_install_requires(self) -> List[str]: pass
 
     def get_package_name(self) -> str:
-        return 'arbitrage'  
+        return 'lightarbitrage'  
     
     def get_extra_compile_args(self) -> List[str]:
         return ["-std=c++17"]
