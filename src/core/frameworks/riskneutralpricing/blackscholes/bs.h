@@ -142,6 +142,7 @@ class BlackScholesSimulation
         double get_T() const {return T_;};
         bool is_updated() const {return is_updated_;};
         Eigen::MatrixXd get_simulated_prices() {if (!is_updated_) update(); return simulated_prices;};
+        std::vector<std::vector<double>> get_simulated_prices_vector() {return get_vector_from_eigen_matrix(simulated_prices);};
         double get_time_taken_for_simulation() const {return time_taken_for_simulation_;};
         MonteCarloEngine get_simulation_engine() const {return engine_;};
         MonteCarloPayoffEngine get_payoff_engine() {if (!is_updated_) update(); return MonteCarloPayoffEngine(simulated_prices, T_);};
