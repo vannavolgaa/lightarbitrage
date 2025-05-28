@@ -406,3 +406,4 @@ external
 eigen 
 build
 lightarbitrage.egg-info
+.DS_Store
