@@ -4,9 +4,7 @@
 #include <pybind11/stl.h>
 #include "py_errors_frameworks.h"
 #include "py_errors_math.h"
-#include "../../../../src/pybindings/errors/core/datastructure/py_errors_datastructure.h"
-#include "py_errors_assetpricer.h"
-#include "py_errors_calibration.h"
+
 
 namespace py = pybind11;
 

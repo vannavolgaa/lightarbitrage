@@ -12,9 +12,9 @@ namespace py = pybind11;
 
 void PyProbability(py::module_& m) {
 
-    py::module stats_module = probability_module.def_submodule("stats", "Module for statistical tools");
-    py::module simulation_module = probability_module.def_submodule("simulation", "Module for Monte Carlo simulations");
-    py::module distribution_module = probability_module.def_submodule("distribution", "Module for probability distributions");
+    py::module stats_module = m.def_submodule("stats", "Module for statistical tools");
+    py::module simulation_module = m.def_submodule("simulation", "Module for Monte Carlo simulations");
+    py::module distribution_module = m.def_submodule("distribution", "Module for probability distributions");
 
     PyDistribution(distribution_module);
     PySimulation(simulation_module);

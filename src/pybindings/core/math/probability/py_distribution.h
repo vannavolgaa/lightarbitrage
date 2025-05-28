@@ -16,7 +16,7 @@ class PyProbabilityDistribution : public ProbabilityDistribution {
         double cdf(double x) const override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, cdf, x); }
         double mgf(double t) const override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, mgf, t); }
         std::complex<double> cf(double t) const override { PYBIND11_OVERRIDE_PURE(std::complex<double>, ProbabilityDistribution, cf, t); }
-        double r() const override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, r); }
+        double r() override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, r); }
     };
     
     // Trampoline for ContinuousProbabilityDistribution
@@ -27,7 +27,7 @@ class PyContinuousProbabilityDistribution : public ContinuousProbabilityDistribu
         double cdf(double x) const override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, cdf, x); }
         double mgf(double t) const override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, mgf, t); }
         std::complex<double> cf(double t) const override { PYBIND11_OVERRIDE_PURE(std::complex<double>, ProbabilityDistribution, cf, t); }
-        double r() const override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, r); }
+        double r() override { PYBIND11_OVERRIDE_PURE(double, ProbabilityDistribution, r); }
         double pdf(double x) const override { PYBIND11_OVERRIDE_PURE(double, ContinuousProbabilityDistribution, pdf, x); }
     };
 
@@ -68,7 +68,7 @@ void PyDistribution(py::module_& m) {
         .def("pdf", &UniformDistribution::pdf)
         .def("r", &UniformDistribution::r)
         .def("get_left_bound", &UniformDistribution::get_left_bound)
-        .def("get_right_bound", &UniformDistribution::get_right_bound);
+        .def("get_right_bound", &UniformDistribution::get_right_bound)
         .def("set_bounds", &UniformDistribution::set_bounds);
 
 }
